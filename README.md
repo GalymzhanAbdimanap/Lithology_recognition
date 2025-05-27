@@ -43,18 +43,21 @@ data/
         ├── (8)Dense rock/
         └── (999)Desctructed core/
 ```
-## Example of dataset  
-Blank  
+## Example of dataset 
+| Image | Class |
+|-----------|-----------|
+|![0](images/0.jpg)           |  Blank          |
+|![1](images/1.jpg)           |  Coarse-grained sandstone         |
+|![2](images/2.jpg)           |  Medium-grained sandstone          |
+|![3](images/3.jpg)           |  Fine-grained sandstone          |
+|![4](images/4.jpg)           |  Shaly sandstone         |
+|![5](images/5.jpg)           |  Clay         |
+|![6](images/6.jpg)           |  Coal          |
+|![7](images/7.jpg)           |  Dense rock         |
+|![999](images/999.jpg)           |  Desctructed core         |
 
-Coarse-grained sandstone  
-Medium-grained sandstone  
-Fine-grained sandstone  
-Shaly sandstone  
-Clay  
-Coal  
-Dense rock  
-Desctructed core
-How to Run
+
+## How to Run
 Each script loads the corresponding trained model from the models folder and evaluates it on the test dataset:
 
 1. Evaluate ConvNeXt model
