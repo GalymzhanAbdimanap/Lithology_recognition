@@ -164,7 +164,7 @@ if __name__ == "__main__":
     # Choose model path(s)
     model_paths = [
         'models/vit_model.100-2.7675.tf',
-        # 'files_pretrain_swin_balanced_dataset/model.72-5.3924.tf',
+        'models/swin_model.72-5.3924.tf',
         # Add other models if needed
     ]
 
