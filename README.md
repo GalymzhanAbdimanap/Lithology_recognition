@@ -71,7 +71,7 @@ Loads transformer-based models.
 Combines predictions from multiple models (e.g., CNN + Transformer).  
 Computes and saves combined confusion matrix and classification report.  
 
-##Notes
+## Notes
 Ensure your GPU is available or modify scripts to run on CPU.  
 Adjust paths in the scripts if your dataset or models are stored elsewhere.  
 The class names are consistent across all scripts:  
