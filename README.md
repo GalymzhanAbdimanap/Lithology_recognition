@@ -51,30 +51,30 @@ Each script loads the corresponding trained model from the models folder and eva
 python test_convnext.py
 ```
 
-Loads ConvNeXt model with custom LayerScale layer.<p>
-Generates predictions and prints classification report.<p>
-Saves normalized confusion matrix plot to models/.<p>
+Loads ConvNeXt model with custom LayerScale layer.  
+Generates predictions and prints classification report.  
+Saves normalized confusion matrix plot to models/.  
 
 2. Evaluate EfficientNetV2 model
 ```bash
 python test_efficientnetv2.py
 ```
-Loads EfficientNetV2-based model.<p>
-Performs evaluation on test dataset.<p>
-Saves confusion matrix plot and classification report.<p>
+Loads EfficientNetV2-based model.  
+Performs evaluation on test dataset.  
+Saves confusion matrix plot and classification report.  
 
 3. Evaluate Transformer-based models
 ```bash
 python test_transform_models.py
 ```
-Loads transformer-based models.<p>
-Combines predictions from multiple models (e.g., CNN + Transformer).<p>
-Computes and saves combined confusion matrix and classification report.<p>
+Loads transformer-based models.  
+Combines predictions from multiple models (e.g., CNN + Transformer).  
+Computes and saves combined confusion matrix and classification report.  
 
 Notes
-Ensure your GPU is available or modify scripts to run on CPU.<p>
-Adjust paths in the scripts if your dataset or models are stored elsewhere.<p>
-The class names are consistent across all scripts:<p>
+Ensure your GPU is available or modify scripts to run on CPU.  
+Adjust paths in the scripts if your dataset or models are stored elsewhere.  
+The class names are consistent across all scripts:  
 ```bash
 ["Blank", "Coarse-grained sandstone", "Medium-grained sandstone", 
  "Fine-grained sandstone", "Shaly sandstone", "Clay", "Coal", 
