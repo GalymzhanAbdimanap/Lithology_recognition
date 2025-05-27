@@ -12,8 +12,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # Configuration
 # -----------------------------
 TEST_DIR = "data/lithology_filled_dataset/test"
-MODEL_PATH = "saved_models_lr_0_001/model_best.h5"
-OUTPUT_CONF_MATRIX = "saved_models_lr_0_001/conf_matrix.png"
+MODEL_PATH = "models/eff_model_best.h5"
+OUTPUT_CONF_MATRIX = "models/eff_conf_matrix.png"
 
 BATCH_SIZE = 64
 IMG_SIZE = (224, 224)
