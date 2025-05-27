@@ -29,6 +29,7 @@ pip install tensorflow numpy matplotlib seaborn scikit-learn
 
 Dataset Structure
 Prepare your dataset with the following directory structure for testing:
+```bash
 data/
 └── lithology_filled_dataset/
     └── test/
@@ -41,6 +42,7 @@ data/
         ├── (7)Coal/
         ├── (8)Dense rock/
         └── (999)Desctructed core/
+```
 How to Run
 Each script loads the corresponding trained model from the models folder and evaluates it on the test dataset:
 
