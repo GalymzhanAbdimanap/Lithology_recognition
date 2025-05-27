@@ -28,7 +28,7 @@ pip install tensorflow numpy matplotlib seaborn scikit-learn
 ```
 
 Dataset Structure
-Prepare your dataset with the following directory structure for testing:
+Prepare your dataset([download](https://drive.google.com/drive/folders/1jKMcqHT8ODdCtwz6fX75S51zGS7eoHPj?usp=sharing)) with the following directory structure for testing:
 ```bash
 data/
 └── lithology_filled_dataset/
