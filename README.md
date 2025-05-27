@@ -3,12 +3,12 @@
 This repository contains evaluation scripts for various deep learning models used to classify lithology images.
 
 ## Project Structure
-
+```bash
 models/ # Folder containing saved model files
 test_convnext.py # Script to evaluate ConvNeXt model
 test_efficientnetv2.py # Script to evaluate EfficientNetV2 model
 test_transform_models.py # Script to evaluate transformer-based models
-
+```
 
 ---
 
@@ -50,30 +50,31 @@ Each script loads the corresponding trained model from the models folder and eva
 ```bash
 python test_convnext.py
 ```
-Loads ConvNeXt model with custom LayerScale layer.
-Generates predictions and prints classification report.
-Saves normalized confusion matrix plot to models/.
+
+Loads ConvNeXt model with custom LayerScale layer.<p>
+Generates predictions and prints classification report.<p>
+Saves normalized confusion matrix plot to models/.<p>
 
 2. Evaluate EfficientNetV2 model
 ```bash
 python test_efficientnetv2.py
 ```
-Loads EfficientNetV2-based model.
-Performs evaluation on test dataset.
-Saves confusion matrix plot and classification report.
+Loads EfficientNetV2-based model.<p>
+Performs evaluation on test dataset.<p>
+Saves confusion matrix plot and classification report.<p>
 
 3. Evaluate Transformer-based models
 ```bash
 python test_transform_models.py
 ```
-Loads transformer-based models.
-Combines predictions from multiple models (e.g., CNN + Transformer).
-Computes and saves combined confusion matrix and classification report.
+Loads transformer-based models.<p>
+Combines predictions from multiple models (e.g., CNN + Transformer).<p>
+Computes and saves combined confusion matrix and classification report.<p>
 
 Notes
-Ensure your GPU is available or modify scripts to run on CPU.
-Adjust paths in the scripts if your dataset or models are stored elsewhere.
-The class names are consistent across all scripts:
+Ensure your GPU is available or modify scripts to run on CPU.<p>
+Adjust paths in the scripts if your dataset or models are stored elsewhere.<p>
+The class names are consistent across all scripts:<p>
 ```bash
 ["Blank", "Coarse-grained sandstone", "Medium-grained sandstone", 
  "Fine-grained sandstone", "Shaly sandstone", "Clay", "Coal", 
