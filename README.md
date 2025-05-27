@@ -43,7 +43,7 @@ data/
         ├── (8)Dense rock/
         └── (999)Desctructed core/
 ```
-## Example of dataset 
+## Dataset preview 
 | Image | Class |
 |-----------|-----------|
 |![0](images/0.jpg)           |  Blank          |
