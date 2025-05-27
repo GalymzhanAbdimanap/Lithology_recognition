@@ -43,6 +43,17 @@ data/
         ├── (8)Dense rock/
         └── (999)Desctructed core/
 ```
+## Example of dataset  
+Blank  
+
+Coarse-grained sandstone  
+Medium-grained sandstone  
+Fine-grained sandstone  
+Shaly sandstone  
+Clay  
+Coal  
+Dense rock  
+Desctructed core
 How to Run
 Each script loads the corresponding trained model from the models folder and evaluates it on the test dataset:
 
