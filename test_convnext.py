@@ -6,19 +6,19 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, classification_report
 from tensorflow.keras.models import load_model
 
-# Используем GPU 0
+# Use GPU 0
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # -----------------------------
-# Конфигурация путей и параметров
+# Paths and parameters configuration
 # -----------------------------
-MODEL_PATH = "saved_models_convnext/convnext_best.h5"
+MODEL_PATH = "models/convnext_best.h5"
 TEST_DIR = "data/lithology_filled_dataset/test"
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 64
 
 # -----------------------------
-# Загрузка тестового датасета
+# Load test dataset
 # -----------------------------
 test_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     TEST_DIR,
@@ -28,7 +28,7 @@ test_dataset = tf.keras.preprocessing.image_dataset_from_directory(
 )
 
 # -----------------------------
-# Классы (если нужно переопределить)
+# Define class names (override if needed)
 # -----------------------------
 class_names = [
     "Blank",
@@ -39,11 +39,11 @@ class_names = [
     "Clay",
     "Coal",
     "Dense rock",
-    "Desctructed core"  # класс 999
+    "Desctructed core"  # class 999
 ]
 
 # -----------------------------
-# Определение кастомного слоя LayerScale (требуется для загрузки модели)
+# Define custom LayerScale layer (required for loading the model)
 # -----------------------------
 class LayerScale(tf.keras.layers.Layer):
     def __init__(self, projection_dim, init_values=1e-6, **kwargs):
@@ -63,12 +63,12 @@ class LayerScale(tf.keras.layers.Layer):
         return inputs * self.scale
 
 # -----------------------------
-# Загрузка обученной модели с кастомным слоем
+# Load trained model with custom layer
 # -----------------------------
 model = load_model(MODEL_PATH, custom_objects={"LayerScale": LayerScale})
 
 # -----------------------------
-# Предсказания на тестовом наборе
+# Make predictions on test dataset
 # -----------------------------
 true_labels = []
 pred_labels = []
@@ -80,7 +80,7 @@ for images, labels in test_dataset:
     pred_labels.extend(pred_classes)
 
 # -----------------------------
-# Матрица ошибок и визуализация
+# Confusion matrix calculation and visualization
 # -----------------------------
 def plot_confusion_matrix(cm, class_names, out_filename, normalize=True):
     idx_999 = class_names.index('Desctructed core')
@@ -108,7 +108,7 @@ print("Confusion Matrix:\n", cm)
 plot_confusion_matrix(cm, class_names, 'saved_models_convnext/conf_matrix_convnext_curr.png', normalize=True)
 
 # -----------------------------
-# Отчет о классификации
+# Print classification report
 # -----------------------------
 print("Classification Report:")
 print(classification_report(true_labels, pred_labels, target_names=class_names))
