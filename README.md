@@ -68,7 +68,7 @@ Saves confusion matrix plot and classification report.
 python test_transform_models.py
 ```
 Loads transformer-based models.  
-Combines predictions from multiple models (e.g., CNN + Transformer).  
+Performs evaluation on test dataset  
 Computes and saves combined confusion matrix and classification report.  
 
 ## Notes
